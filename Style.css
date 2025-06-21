@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#homepage{
+    width: 100vw;
+    height: 100vh;
+    line-height: 16px;
+    background-color: #f5f5f5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start; 
+}
+#categories{
+    width: 100vw;
+    height: 90vh;
+    line-height: 16px;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;    
+
+    padding: 3%;
+    gap: 2%;
+}
+#navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(28, 28, 28);
+    color: #F5F7FA;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    padding-left: 3%;
+}
+#navbar span{
+    min-width: max-content;
+    
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Every Input Field*/
+.input{
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+    margin-right: 5px;
+    box-sizing: border-box;
+
+    padding: 2px 5px;
+    overflow-wrap:break-word;
+    outline: none;
+
+    
+}
+
+
+
+
+.category{
+    flex: 1;
+    border-radius: 16px;
+    min-width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.categoryTitle{
+    padding: 5px 5px 10px 5px;
+    min-width: max-content;
+    
+}
+
+/* Add new button */
+
+.addNew{
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 5px 8px;
+
+    border: none;
+    border-radius: 16px;
+}
+#addNewBtn{
+    background: transparent;
+    border: none;
+    color: #fff;
+}
+.addImg{
+    height: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+/* New task Div */
+.newTaskDiv{
+    background-color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;  
+    justify-content: space-between;
+    padding: 5px 5px 5px 8px;
+
+    border: none;
+    border-radius: 16px;
+    align-items: center;
+    
+}
+
+/* SavedTaskDiv */
+.savedTaskDiv{
+    background-color: #F5F7FA;
+
+    border: 1px solid black;
+    border-radius: 16px;
+
+    padding: 5px 5px 5px 8px;
+}
+
+.newTaskDescription, .newTaskTitle{
+    background-color: transparent;
+}
+.newTaskDescription{
+    max-width: 100%;
+    resize: none;
+}
+
+.newTaskTitle{
+    border-radius: 0;
+    font-size: larger;
+    border-bottom: 1px solid rgba(28, 28, 28, 0.597);
+}
+
+.otherDetails{
+    background-color: transparent;
+    padding: 5px 0;
+
+    border: none;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+.dueDate{
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: none;
+    background-color: transparent;
+    
+    padding: 2px;
+    outline: none;    
+    
+}
+.dueDate::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.urgency{
+    border: none;
+    border-radius: 16px;
+    height: 16 px;
+
+    color: #fff;
+    padding: 2px 15px;
+    width: 100px;
+
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}
+.urgency, .dueDate {
+  flex-shrink: 0;
+}
+
+.urgent{
+    background-color: #fe6d6a;
+    
+}
+.not-urgent{
+    background-color: #0fcc5b;
+}
+
+.saveImg{
+    height: 20px;
+    padding: 0;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+/* Task div */
+.taskDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+
+    background-color: #e2e2e2;
+    flex: 1;  
+    justify-content: space-between;
+    padding: 5px 5px 5px 8px;
+
+    border: none;
+    border-radius: 16px;
+}
+
+.taskTitle{
+    padding: 5px 0 10px 0;
+    min-width: max-content;
+
+    border-radius: 0;
+    font-size: larger;
+}
+.taskDescription{
+    font-size: smaller;
+}
+.taskDueDate{
+    background-color: rgb(28, 28, 28);
+    color: #F5F7FA;
+    padding: 3px 15px 2px;
+    border: none;
+    border-radius: 16px;
+    font-size: 12px;
+
+}
+.deleteImg{
+    height: 20px;
+    padding: 0;
+    object-fit: cover;
+    background-color: transparent;
+}
+
+
+@media screen and (max-width: 768px) {
+    #navbar{
+        height: 6vh;
+    }
+    #categories{
+        height: 94vh;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 25px;
+    }
+
+    .category{
+        flex: none;
+        gap: 8px;
+    }
+    .newTaskDiv{
+        flex: none;
+    }
+    
+}
