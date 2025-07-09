@@ -73,7 +73,8 @@ html, body{
 .category{
     flex: 1;
     border-radius: 16px;
-    min-width: 30%;
+    min-width: 32%;
+    min-height: 110px;
 
     display: flex;
     flex-direction: column;
@@ -158,6 +159,9 @@ html, body{
     justify-content: space-between;
 
     width: 100%;
+    height: 30px;
+    gap: 5px;
+
 }
 .dueDate{
 
@@ -170,6 +174,7 @@ html, body{
     
     padding: 2px;
     outline: none;    
+    overflow: hidden;
     
 }
 .dueDate::-webkit-calendar-picker-indicator {
@@ -189,9 +194,10 @@ html, body{
 
     font-size: 12px;
     line-height: 16px;
-    text-align: center;
+    
 }
 .urgency, .dueDate {
+    text-align: center;
   flex-shrink: 0;
 }
 
@@ -243,13 +249,20 @@ html, body{
     border: none;
     border-radius: 16px;
     font-size: 12px;
-
+    text-align: center;
+    overflow: hidden;
+}
+.imgDiv{
+    display: flex;
+    align-items: center;
+    
 }
 .deleteImg{
-    height: 20px;
+    height: 16px;
     padding: 0;
     object-fit: cover;
     background-color: transparent;
+    vertical-align: middle;
 }
 
 
