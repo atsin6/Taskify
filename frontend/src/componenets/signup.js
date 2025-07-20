@@ -75,6 +75,9 @@ export function renderSignupDiv() {
   const signinLink = document.createElement("a");
   signinLink.innerHTML = "Sign In";
   signinLink.id = "signinLink";
+  signinOption.addEventListener("click", (event) => {
+    renderSigninPage();
+  });
 
   signinOption.append(signinLink);
 
@@ -100,6 +103,11 @@ export function renderSignupDiv() {
 }
 
 export function renderSignupPage() {
+  const signinBtn = document.querySelector("#signinBtnNav");
+  signinBtn.classList.remove("hideBtn");
+
+  const signupBtn = document.querySelector("#signupBtnNav");
+  signupBtn.classList.add("hideBtn");
   const homepage = document.querySelector("#homepage");
   homepage.replaceChildren();
 

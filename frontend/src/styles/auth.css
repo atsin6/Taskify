@@ -21,17 +21,16 @@
 }
 
 a{
-    color:#091b44;
+    color:rgba(155, 155, 155, 0.914);
     font-weight: 500;
     cursor: pointer;
-    background: #fff;
 
-    padding: 2px 5px;
+    padding: 2px 0px;
     border-radius: 8px;
 }
 
 .active-link{
-  color: rgba(64, 140, 203, 0.914);
+  color: rgba(29, 38, 34, 0.914);
 }
 
 /* .signupDiv:hover{
@@ -107,16 +106,17 @@ a{
   border-radius: 5px;
 
   backdrop-filter: blur(10px);
-  background-color: rgba(48, 48, 48, 0.2);
+  background-color: rgba(27, 47, 74, 0.2);
 
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
   
   color: #fff;
   padding: 5px 0;
+  cursor: pointer;
 }
 
 .btn:hover{
-  box-shadow: 5px 4px 30px rgba(0, 0, 0, 0.3);  
+  box-shadow: 5px 4px 30px rgba(113, 112, 112, 0.3);  
 }
 
 #signupOption, #signinOption{

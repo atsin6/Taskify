@@ -1,4 +1,6 @@
 import "../styles/landingPage.css";
+import { renderSigninPage } from "./signin";
+import { renderSignupPage } from "./signup";
 
 export function renderLandingPage() {
   const landingPage = document.createElement("div");
@@ -24,10 +26,17 @@ export function renderLandingPage() {
   loginBtn.className = "authBtn";
   loginBtn.innerHTML = "Log In";
   loginBtn.id = "loginBtn";
+  loginBtn.addEventListener("click", (event) => {
+    renderSigninPage();
+  });
+
   const signupBtn = document.createElement("div");
   signupBtn.className = "authBtn";
   signupBtn.innerHTML = "Start for free";
   signupBtn.id = "signupBtn";
+  signupBtn.addEventListener("click", (event) => {
+    renderSignupPage();
+  });
 
   authDiv.append(loginBtn, signupBtn);
 
@@ -39,6 +48,13 @@ export function renderLandingPage() {
 }
 
 export async function goToHome() {
+  const signinBtn = document.querySelector("#signinBtnNav");
+  signinBtn.classList.remove("hideBtn");
+
+  const signupBtn = document.querySelector("#signupBtnNav");
+  signupBtn.innerHTML = "Start for free";
+  signupBtn.classList.remove("hideBtn");
+
   const homepage = document.querySelector("#homepage");
   homepage.replaceChildren();
 

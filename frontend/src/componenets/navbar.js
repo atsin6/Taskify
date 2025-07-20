@@ -16,22 +16,23 @@ export function renderNavbar() {
   const navPanel = document.createElement("div");
   navPanel.className = "navPanel";
 
-  const loginBtn = document.createElement("div");
-  loginBtn.className = "authBtnNav";
-  loginBtn.innerHTML = "Log In";
-  loginBtn.addEventListener("click", (event) => {
+  const signinBtn = document.createElement("div");
+  signinBtn.className = "authBtnNav";
+  signinBtn.id = "signinBtnNav";
+  signinBtn.innerHTML = "Sign In";
+  signinBtn.addEventListener("click", (event) => {
     renderSigninPage();
   });
 
   const signupBtn = document.createElement("div");
   signupBtn.className = "authBtnNav";
   signupBtn.innerHTML = "Start for free";
-  signupBtn.id = "signupBtn";
+  signupBtn.id = "signupBtnNav";
   signupBtn.addEventListener("click", (event) => {
     renderSignupPage();
   });
 
-  navPanel.append(loginBtn, signupBtn);
+  navPanel.append(signinBtn, signupBtn);
   navbar.append(title, navPanel);
 
   return navbar;

@@ -43,12 +43,14 @@
     cursor: pointer;
 }
 
-
-
-#signupBtn{
+#signupBtnNav{
     background-color: #fff;
     color: #1F212C;
     border: none;
+}
+
+.hideBtn{
+    display: none;
 }
 
 @media (max-width: 450px){

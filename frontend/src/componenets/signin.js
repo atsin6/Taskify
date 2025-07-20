@@ -1,3 +1,5 @@
+import { renderSignupPage } from "./signup";
+
 export function renderSigninDiv() {
   const signinDiv = document.createElement("div");
   signinDiv.className = "authDiv";
@@ -9,7 +11,6 @@ export function renderSigninDiv() {
   const signinForm = document.createElement("form");
   signinForm.id = "mySigninForm";
   signinForm.className = "form";
-  // signinForm.action = "/signin";
 
   const emailLabel = document.createElement("label");
   emailLabel.innerHTML = "Email";
@@ -56,6 +57,9 @@ export function renderSigninDiv() {
 
   const signupLink = document.createElement("a");
   signupLink.innerHTML = "Sign Up";
+  signupOption.addEventListener("click", (event) => {
+    renderSignupPage();
+  });
 
   signupOption.innerHTML = "Do not have an account? ";
   signupOption.append(signupLink);
@@ -76,7 +80,14 @@ export function renderSigninDiv() {
   return signinDiv;
 }
 
-export function renderSigninPage() {
+export async function renderSigninPage() {
+  const signinBtn = document.querySelector("#signinBtnNav");
+  signinBtn.classList.add("hideBtn");
+
+  const signupBtn = document.querySelector("#signupBtnNav");
+  signupBtn.innerHTML = "Sign Up";
+  signupBtn.classList.remove("hideBtn");
+
   const homepage = document.querySelector("#homepage");
   homepage.replaceChildren();
 
