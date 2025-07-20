@@ -1,0 +1,64 @@
+.navbar{
+    width: 100%;
+    height: max-content;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+    box-sizing: border-box;
+}
+
+.Title{
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navPanel{
+    width: 50vw;
+    height: auto; 
+
+    background: transparent;
+    padding-right: 10px;
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+.authBtnNav{
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 300;
+
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+
+#signupBtn{
+    background-color: #fff;
+    color: #1F212C;
+    border: none;
+}
+
+@media (max-width: 450px){
+    .navbar{
+        padding: 10px 10px;
+    }
+    .authBtnNav{
+        visibility: hidden;
+    }
+    #Title{
+        font-size: 20px;
+    }
+}

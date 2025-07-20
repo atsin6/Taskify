@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+}
+
+body{
+    background: 
+        radial-gradient(circle at top left, #3c435d 0%, #101536 60%, transparent),
+        radial-gradient(circle at bottom right, #20335a 0%, #091b44 60%, transparent);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+#homepage{
+    width: 100%;
+    height: 100%;
+    line-height: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: transparent;
+    /* backdrop-filter: blur(15px); */
+}
+
+
